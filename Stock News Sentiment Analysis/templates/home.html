@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container" align="center">
+		<div id="brandname" align="center">
+			<h2>Stock Market Sentiment Analysis<h2>
+		</div>
+		
+	</div>
+	</header>
+
+	<div class="ml-container" align="center">
+
+		<form action="{{ url_for('predict')}}" method="POST">
+		<p>Enter the name of the companies in space separated format (For example: Amazon - AMZN)</p>
+		<!-- <input type="text" name="comment"/> -->
+		<textarea name="review" rows="6" cols="50"></textarea>
+		<br/>
+
+		<input type="submit" class="btn-info" value="Search">
+		
+	</form>
+		
+	</div>
+
+	
+</body>
+</html>
